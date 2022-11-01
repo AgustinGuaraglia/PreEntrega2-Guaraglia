@@ -1,0 +1,438 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    background-color: rgb(22, 22, 22);
+}
+
+/* CLASE GENERAL */
+.t-center{
+    text-align: center;
+}
+.espaciado{
+    margin-top: 20px;
+}
+.title{
+    color: rgb(221, 221, 221);
+}
+
+/* CARD iNDEX*/
+.card {
+    width: 149px;
+    height: 264px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
+}
+   
+.card2 {
+    transition: all .2s;
+}
+   
+.card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+}
+   
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+/* CARD SERVICIOS*/
+.cardServicios {
+    width: 300px;
+    height: 205px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
+}
+   
+.card2 {
+    transition: all .2s;
+}
+   
+.card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+}
+   
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+/* VISTA MOBILE */
+
+#grid_padre{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+header{
+    grid-area: header ;
+}
+main{
+    grid-area: main;
+    height: 90vh;
+}
+#mainSobremi{
+    height: 50vh;
+}
+footer{
+    grid-area: footer;
+    margin: 20px;
+    text-align: center;
+}
+
+
+/* V.M/ NAVBAR */
+ul, li, li>a {
+    background-color: transparent;
+}
+
+.navBar{
+    background-color: rgb(20, 20, 20);
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    align-items: center;
+    justify-content:center;
+}
+li > a { /* los a hijos de li */
+    color: rgb(221, 221, 221);
+    text-decoration: none;
+}
+li {
+    padding: 5px;
+    list-style: none;
+}
+
+/* las templates rows se hacen todas de 1fr para que mientras se vaya desarrollando el codigo, éstas se vayan
+acomodando de manera pareja */
+
+.titulo-hola,.titulo-diseniador,em,
+.mail,.linkedin,a,.icon,.container-titulos,.container-CTA{
+    background-color: transparent;
+}
+/* Index */
+section{
+    height: 220px;
+}
+.img{ 
+    height: 200px;
+    width: 100%;
+    opacity: 0.5;
+}
+.container-titulos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 160px;
+}
+
+.titulo-hola{
+    color: rgb(221, 221, 221);
+    font-size: 20px;
+}
+.titulo-diseniador{
+    font-size: 18px;
+    font-family: 'DM Mono', monospace;;
+    color: rgb(221, 221, 221);
+    position: relative;
+    top: 10px;
+}
+.container-CTA{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 120px;
+
+}
+.div-containerIndex{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.div-unoIndex, .div-dosIndex, .div-tresIndex{
+    width: 149px;
+    height: 264px;
+    background-color: transparent;
+/*     box-shadow:5px 5px 10px; */
+}
+.div-unoIndex{
+    background-image: url(../img/Designproto.png);
+    background-size: contain;
+}
+.div-dosIndex{
+    background-image: url(../img/Celiapp.png);
+    background-size: contain;
+}
+.div-tresIndex{
+    background-image: url(../img/Amazon.png);
+    background-size: contain;
+}
+.mail{
+    position: relative;
+    right: 50px;    
+}
+.linkedin {
+    position: relative;
+    left: 50px;
+}
+.icon{
+    width: 40px;
+    height: fit-content;
+}
+
+
+/* SERVICIOS */
+/* div-container div  esto significa: a los div que son
+    hijos de div-container... */
+
+.div-dos, .div-tres{
+    width: 300px;
+    height: 205px;
+    color: #000;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+/*     box-shadow:5px 5px 10px; */
+}
+.div-dos{
+    background-image:url(../img/uxui.webp);
+    background-size: cover;
+}
+.div-tres{
+    background-image:url(../img/programacion.jpeg);
+    background-size: cover;
+    color: #fff;
+}
+.div-container{
+    height: 400px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Sobre mi */
+.divContainerSobremi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.divSobremi{
+    width: 300px;
+    height: 205px;
+    background-image:url(../img/man.png);
+    background-size: cover;
+}
+.divsaboutme{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.h2QuienSoy{
+    font-size: 20px;
+}
+.parrafo{
+    font-size: 14px;
+    text-align: justify;
+}
+ 
+/* Contacto */
+.fieldset{ 
+    margin: 20px 300px;
+    padding: 15px;
+    width: 500px;
+}
+legend {
+    font-size: larger;
+}
+.titulosFieldset{
+    font-weight: bold;
+    margin: 5px 5px 3px 0px;
+}
+.btnEnviar{
+    padding:3px;
+    margin: 5px 0px;
+}
+textarea {
+    margin-top: 8px;
+    text-align: center;
+}
+
+
+/* TABLET */
+@media (min-width: 768px){ 
+    #grid_padre{
+        display: grid;
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    }
+
+    #mainServicios{
+        grid-area: main;
+        height: 70vh;
+    }
+    .navBar{
+        padding: 20px;
+    }
+    ul{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .div-container{ 
+        flex-direction: row;
+        height: fit-content;
+    }
+    .h2-servicios{
+        font-size: xx-large;
+    }
+    /* Index */
+    #mainIndex{
+        height: 115vh;
+    }
+    section{
+        height: 500px;
+    }
+    .container-titulos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 250px;
+    }
+    .container-CTA{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 200px;
+    }
+    .img{ 
+        height: 420px;
+        width: 100%;
+        opacity: 0.5;
+    }
+    .div-unoIndex, .div-dosIndex, .div-tresIndex{
+        width: 205px;
+        height: 364px;
+    }
+    .titulo-hola{
+        font-size: 32px;
+    }
+    .titulo-diseniador{
+        font-size: 32px;
+    }
+    /* Sobremi */
+    #mainSobremi{
+        height: 40vh;
+    }
+    .divContainerSobremi{
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    .divsaboutme{
+        align-items: flex-start;
+        margin-left: 20px;
+    }
+}
+
+
+/* DESKTOP */
+@media (min-width: 1024px){ 
+    /* Servicios */
+    .h2-servicios{
+        font-size: xx-large;
+    }
+    #mainServicios{
+        height: 70vh;
+    }
+    /* Index */
+    #mainIndex{
+        height: 190vh;
+    }
+
+    .container-titulos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 250px;
+    }
+    .container-CTA{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: 160px;
+    }
+    .img{ 
+        height: 420px;
+        width: 100%;
+        opacity: 0.5;
+    }
+    .div-containerIndex{
+        flex-direction: row;
+    }
+    .card {
+        width: 205px;
+        height: 364px;
+    }
+    .div-unoIndex, .div-dosIndex, .div-tresIndex{
+        width: 205px;
+        height: 364px;
+        background-color: transparent;
+        font-size: x-large;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    /*     box-shadow:5px 5px 10px; */
+    }
+    .div-unoIndex{
+        background-image: url(../img/Designproto.png);
+        background-size: contain;
+    }
+    .div-dosIndex{
+        background-image: url(../img/Celiapp.png);
+        background-size: contain;
+    }
+    .div-tresIndex{
+        background-image: url(../img/Amazon.png);
+        background-size: contain;
+    }
+    .titulo-hola{
+        font-size: 32px;
+    }
+    .titulo-diseniador{
+        font-size: 32px;
+    }
+    #mainSobremi{
+        height: 70vh;
+    }
+}

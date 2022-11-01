@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Mi primera web</title>
+    <!-- la etiqueta de abajo representa que lo que pongamos dentro de los 
+    parentesis es el estilo que le vamos a dar a lo que está en amarillo. Siempre 
+    que agreguemos estilos se finaliza con ;-->
+    <!-- la etiqueta de style corresponde al ejemplo 2 escrito en el doc.-->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- tr means table row, th means table heading
+    td sirve para definir elementos estándares dentro de la tabla-->
+    <table style="width: 500px;">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+       <tbody>
+        <tr>
+            <td>Mouse</td>
+            <td>21.00</td>
+        </tr>
+        <tr>
+            <td>Teclado</td>
+            <td>35.00</td>
+        </tr>
+       </tbody>
+        <tfoot>
+            <td></td>
+            <td>Total: 46.00</td>
+        </tfoot>
+        <!-- thead, tbody y tfoot sirven para que cuando se le haga scroll los 
+        thead y los tfoot queden fijos y el tbody scrollee-->
+    </table>
+    <!-- ul es lista no ordenada, unordered list?. li es list item-->
+    <ul> 
+        <li>Elemnto 1</li>
+        <li>Elemnto 2</li>
+        <li>Elemnto 3</li>
+        <li>Elemnto 4</li>
+    </ul>
+    <!-- ol es lista ordenada, ordered list?-->
+    <ol> 
+        <li value="10">Elemnto 1</li>
+        <li>Elemnto 2</li>
+        <li>Elemnto 3</li>
+        <li>
+            <ol>
+                <li style="list-style-type:lower-roman">Sub Elemento 1</li>
+                <li style="list-style-type:lower-roman">Sub Elemento 2</li>
+            </ol>
+        </li>
+    </ol>
+    <form action="/formulario" method="post">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" placeholder="Escribe tu nombre" />
+        <br>
+        <label for="contraseña">Contraseña</label>
+        <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña" />
+        <br>
+        <textarea rows="6" cols="20" id="comentario" placeholder="Ingrese comentario" name="comentario"></textarea>
+        <br>
+        <input type="file" name="file"/>
+        <input type="submit" style="color: red" />
+        <!-- el imput de tipo submit funciona igual que un boton de tipo submit, 
+        siempre y cuando se haya especificado en action donde ira el formulario.
+        La diferencia está en que la etiqueta button es mas personalizable que el input 
+        de tipo submit-->
+        <br>
+        <button type="button">Boton</button>
+        <button type="submit">Submit</button>
+        <button type="reset">reset</button>
+    </form> 
+    <h1>Mi primer heading</h1> 
+    <h2>Mi primer heading</h2>
+    <h3>Mi primer heading</h3>
+    <h4>Mi primer heading</h4>
+    <h5>Mi primer heading</h5>
+    <h6>Mi primer heading</h6>
+    <h7>Este heading no existe</h7>
+    <p>Esto vendria a ser un parrafo</p>
+    <p>Esto seria un segundo parrafo</p>
+    <hr>
+    <h2>Puedo poner otro heading mas para variar</h2>
+    <p>
+        Y despues otro parrafo que a partir de ACA <br><span style="color:red">
+        va a ser rojo</span>
+    </p>
+    <!-- con br le doy espacios tipo enter, entre mas br mas espacios-->
+    <!-- esta etiqueta es un comentario que no va a aparecer en la web,
+         es para otros desarrolladores -->
+    <a href="https://www.google.com">Ir a google en la misma pag</a>
+     <br>
+    <a target="_blank" href="https://www.google.com">Ir a google en otra pestaña</a>
+    <br>
+    <img src="img/no regrets.jpeg" height="250" />
+    
+</body>
+</html>

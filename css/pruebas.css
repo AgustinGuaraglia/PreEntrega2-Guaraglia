@@ -1,0 +1,161 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    background-color: #333;
+}
+
+/* CLASE GENERAL */
+.t-center{
+    text-align: center;
+}
+.espaciado{
+    margin-top: 20px;
+}
+.title{
+    color: rgb(221, 221, 221);
+}
+
+/* CARD */
+.card {
+    width: 300px;
+    height: 205px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
+}
+   
+.card2 {
+    width: 310px;
+    height: 210px;
+    background-color: #1a1a1a;
+    transition: all .2s;
+}
+   
+.card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+}
+   
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+/* VISTA MOBILE */
+
+#grid_padre{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+    height: 70vh;
+}
+footer{
+    grid-area: footer;
+    margin: 20px;
+}
+
+
+/* V.M/ NAVBAR */
+ul, li, li>a {
+    background-color: transparent;
+}
+
+.navBar{
+    background-color: rgb(20, 20, 20);
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    align-items: center;
+    justify-content:center;
+}
+li > a { /* los a hijos de li */
+    color: rgb(221, 221, 221);
+    text-decoration: none;
+}
+li {
+    padding: 5px;
+    list-style: none;
+}
+
+/* las templates rows se hacen todas de 1fr para que mientras se vaya desarrollando el codigo, éstas se vayan
+acomodando de manera pareja */
+
+
+/* V.M MAIN */
+.div-container div{ /* esto significa: a los div que son
+    hijos de div-container... */
+}
+.div-dos, .div-tres{
+    width: 300px;
+    height: 205px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.div-container{
+    height: 400px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* TABLET */
+@media (min-width: 768px){ 
+    #grid_padre{
+        display: grid;
+        grid-template-areas: 
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    }
+    main{
+        grid-area: main;
+        height: 70vh;
+    }
+    .navBar{
+        padding: 20px;
+    }
+    ul{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .div-container{ 
+        flex-direction: row;
+        height: fit-content;
+    }
+    .h2-servicios{
+        font-size: xx-large;
+    }
+}
+
+
+/* DESKTOP */
+@media (min-width: 1024px){ 
+    .h2-servicios{
+        font-size: xx-large;
+    }
+    main{
+        grid-area: main;
+        height: 70vh;
+    }
+}
